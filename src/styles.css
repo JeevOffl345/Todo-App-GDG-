@@ -10,12 +10,18 @@ body,
   --bg-color: black;
   --text-color: #fff;
   --button-col: #fff;
+  --border-col: rgba(255, 255, 255, 0.725);
+  --box-shadow: rgba(255, 255, 255, 0.888);
+  --cont-shad: rgba(255, 255, 255, 0.4);
 }
 
 .Application.light {
   --bg-color: white;
   --text-color: black;
   --button-col: black;
+  --border-col: rgba(61, 48, 48, 0.1);
+  --box-shadow: rgba(0, 0, 0, 0.5);
+  --cont-shad: rgba(0, 0, 0, 0.1);
 }
 
 .Application {
@@ -35,7 +41,7 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   background-color: #8b0000;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px 0 var(--box-shadow);
 }
 
 .theme {
@@ -61,9 +67,9 @@ header {
   max-width: 600px;
   padding: 20px;
   background: var(--bg-color);
-  border: 2px solid rgba(61, 48, 48, 0.1);
+  border: 2px solid var(--border-col);
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px var(--cont-shad);
 }
 
 .input-container {
@@ -83,10 +89,18 @@ button {
   padding: 8px 12px;
   border: none;
   background: #007bff;
-  color: white;
+  color: var(--text-color);
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
+}
+
+button.Done{
+  background: #0dcb0d;
+}
+
+button.Delete{
+  background:#F2003C;
 }
 
 button:hover {
@@ -107,10 +121,34 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(61, 48, 48, 0.1);
+  border: 1px solid var(--border-col);
 }
 
 li.completed {
   text-decoration: line-through;
   opacity: 0.7;
+}
+
+.filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-container button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #6c757d;
+  color: var(--text-color);
+  transition: background 0.2s;
+}
+
+.filter-container button:hover {
+  background: #5a6268;
+}
+
+.filter-container button.active {
+  background: #007bff;
 }
