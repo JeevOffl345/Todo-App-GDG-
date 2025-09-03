@@ -1,2 +1,2 @@
 # Todo-App-GDG-
-A Todo Web App for submitting to GDG club of my college to get recruited
+A Todo Web App as a practice project implementing my react skills
