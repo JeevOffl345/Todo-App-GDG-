@@ -16,7 +16,7 @@ body,
 }
 
 .Application.light {
-  --bg-color: white;
+  --bg-color: rgb(234, 221, 221);
   --text-color: black;
   --button-col: black;
   --border-col: rgba(61, 48, 48, 0.1);
@@ -95,12 +95,12 @@ button {
   transition: background 0.2s;
 }
 
-button.Done{
+button.Done {
   background: #0dcb0d;
 }
 
-button.Delete{
-  background:#F2003C;
+button.Delete {
+  background: #f2003c;
 }
 
 button:hover {
@@ -151,4 +151,71 @@ li.completed {
 
 .filter-container button.active {
   background: #007bff;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .app {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .filter-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .input-container input {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app {
+    max-width: 800px;
+  }
 }
